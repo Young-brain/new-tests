@@ -1,11 +1,6 @@
 import * as MyFn from "../src/capitalize.js";
+import { strict as assert } from 'assert';
 
-if (MyFn.capitalize('hi') != 'Hi') {
-    throw new Error ('Function works no-correct!');
-}
 
-if (MyFn.capitalize('') != '') {
-    throw new Error ('Function works no-correct!');
-}
-
-console.log('Tests passed!');
+assert.equal(MyFn.capitalize('hi'), 'Hi');
+assert.equal(MyFn.capitalize(''), '');
